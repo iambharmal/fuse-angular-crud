@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add Demo</h1>
+<div mat-dialog-content class="flex flex-col p-8">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="payload.name" placeholder="Name" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="payload.description" placeholder="Description" required></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Field 1</mat-label>
+    <input matInput [(ngModel)]="payload.field1" placeholder="Field 1" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Field 2</mat-label>
+    <input matInput [(ngModel)]="payload.field2" placeholder="Last Name" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary" [mat-dialog-close]="payload" cdkFocusInitial>Submit</button>
+</div>

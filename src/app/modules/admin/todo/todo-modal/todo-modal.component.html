@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Add ToDo</h1>
+<div mat-dialog-content class="flex flex-col p-8">
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput [(ngModel)]="payload.firstname" placeholder="First Name" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput [(ngModel)]="payload.lastname" placeholder="Last Name" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="payload.email" type="email" placeholder="Email" required> 
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="payload.username" placeholder="Username" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Role</mat-label>
+    <input matInput [(ngModel)]="payload.role" placeholder="Role" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary" [mat-dialog-close]="payload" cdkFocusInitial>Submit</button>
+</div>
